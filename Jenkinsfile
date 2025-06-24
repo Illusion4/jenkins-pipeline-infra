@@ -1,37 +1,74 @@
 pipeline {
-  agent { label 'terraform' }
+  agent {
+        kubernetes {
+            label 'terraform-agent'
+            defaultContainer 'terraform'
+            containerTemplate {
+                name 'terraform'
+                image 'vladyslavlintur/terraform-gcloud:latest'
+                ttyEnabled true
+                command 'cat'
+            }
+            namespace 'jenkins'
+        }
+    }
+
+  parameters {
+    booleanParam(name: 'AUTO_APPROVE', defaultValue: true, description: 'Auto-approve?')
+  }
+
+  environment {
+    TF_VAR_env = "${params.ENV}"
+    TF_VAR_region = "${params.REGION}"
+    TF_VAR_cloud_bucket       = credentials('tf-cloud-bucket')
+    TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
+    GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
+    TF_VAR_private_key_path = ""
+  }
 
   stages {
     stage('Clone Repositories') {
             steps {
                 dir('config') {
-                    git branch: 'DI-34-Develop', credentialsId: 'ssh_privatekey_github', url: 'git@github.com:iviul/Config.git'
+                    git branch: 'main', url: 'https://github.com/Illusion4/jenkins-pipeline-infra.git'
                     sh 'ls -la'
                     sh 'pwd'
                 }
-                dir('milestone') {
-                    git branch: 'test-jenkins-application', url: 'https://github.com/iviul/Milestone-2.git'
+                dir('infra') {
+                    git branch: 'main', url: 'https://github.com/iviul/Milestone-2.git'
                     sh 'ls -la'
                     sh 'pwd'
                 }
-                dir('milestone/terraform') {
+                dir('infra/terraform') {
                     sh 'cp "../../config/config-kuber.json" .'
                 }
             }
         }
-    stage('Init') {
+    stage('Terraform Init') {
       steps {
-        container('terraform') {
-          sh 'terraform init'
+        dir('infra/terraform/gcp') {
+        withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+          sh '''
+            terraform init -backend-config="bucket=$TF_VAR_cloud_bucket" -reconfigure
+          '''
+         }
         }
       }
     }
-    stage('Apply') {
+
+    stage('Terraform Apply') {
       steps {
-        container('terraform') {
-          sh 'terraform apply -auto-approve'
-        }
+          dir('infra/terraform/gcp') {
+        withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+          sh "terraform apply ${params.AUTO_APPROVE ? '-auto-approve' : ''}"
+        }}
       }
+    }
+  }
+
+  post {
+    always {
+      echo "Finished for ${params.ENV}"
     }
   }
 }
