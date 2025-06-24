@@ -18,12 +18,9 @@ pipeline {
   }
 
   environment {
-    TF_VAR_env = "${params.ENV}"
-    TF_VAR_region = "${params.REGION}"
     TF_VAR_cloud_bucket       = credentials('tf-cloud-bucket')
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
-    TF_VAR_private_key_path = "."
     TF_VAR_jenkins_github_ssh_private_key = "."
   }
 
@@ -49,7 +46,7 @@ pipeline {
       steps {
         dir('infra/terraform/gcp') {
           sh '''
-            terraform init -backend-config="bucket=$TF_VAR_cloud_bucket" -reconfigure
+            terraform init -backend-config="bucket=$TF_VAR_cloud_bucket" -backend-config="credentials=$TF_VAR_gcp_credentials_file" -reconfigure
           '''
         }
       }
