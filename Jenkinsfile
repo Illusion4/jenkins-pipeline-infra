@@ -22,6 +22,7 @@ pipeline {
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
     TF_VAR_jenkins_github_ssh_private_key = "."
+    GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
   }
 
   stages {
