@@ -35,7 +35,7 @@ pipeline {
                     sh 'pwd'
                 }
                 dir('infra') {
-                    git branch: 'main', url: 'https://github.com/iviul/Milestone-2.git'
+                    git branch: 'DI-11-Develop', url: 'https://github.com/iviul/Milestone-2.git'
                     sh 'ls -la'
                     sh 'pwd'
                 }
@@ -59,7 +59,7 @@ pipeline {
     stage('Terraform Apply') {
       steps {
           dir('infra/terraform/gcp') {
-        withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+            withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
           sh "terraform apply ${params.AUTO_APPROVE ? '-auto-approve' : ''}"
         }}
       }
