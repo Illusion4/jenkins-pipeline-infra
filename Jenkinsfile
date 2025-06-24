@@ -22,7 +22,6 @@ pipeline {
     TF_VAR_region = "${params.REGION}"
     TF_VAR_cloud_bucket       = credentials('tf-cloud-bucket')
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
-    GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
     TF_VAR_private_key_path = "."
     TF_VAR_jenkins_github_ssh_private_key = "."
@@ -49,11 +48,9 @@ pipeline {
     stage('Terraform Init') {
       steps {
         dir('infra/terraform/gcp') {
-        withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
           sh '''
             terraform init -backend-config="bucket=$TF_VAR_cloud_bucket" -reconfigure
           '''
-         }
         }
       }
     }
@@ -61,16 +58,9 @@ pipeline {
     stage('Terraform Apply') {
       steps {
           dir('infra/terraform/gcp') {
-            withCredentials([file(credentialsId: 'gcp-sa-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
           sh "terraform apply ${params.AUTO_APPROVE ? '-auto-approve' : ''}"
-        }}
+        }
       }
-    }
-  }
-
-  post {
-    always {
-      echo "Finished for ${params.ENV}"
     }
   }
 }
