@@ -23,7 +23,7 @@ pipeline {
     TF_VAR_cloud_bucket       = credentials('tf-cloud-bucket')
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
     GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
-    TF_VAR_private_key_path = ""
+    TF_VAR_private_key_path = "."
   }
 
   stages {
@@ -35,7 +35,7 @@ pipeline {
                     sh 'pwd'
                 }
                 dir('infra') {
-                    git branch: 'DI-11-Develop', url: 'https://github.com/iviul/Milestone-2.git'
+                    git branch: 'jenkins-infra-pipeline', url: 'https://github.com/iviul/Milestone-2.git'
                     sh 'ls -la'
                     sh 'pwd'
                 }
