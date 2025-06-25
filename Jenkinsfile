@@ -66,7 +66,9 @@ pipeline {
     stage('Wait for Approval') {
         agent none
         steps {
+          script {
             input(message: "Approve Terraform Apply?", ok: "Apply Now")
+          }
         }
     }
 
