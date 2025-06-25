@@ -17,6 +17,8 @@ pipeline {
     string(name: 'config_repo', defaultValue: 'https://github.com/Illusion4/jenkins-pipeline-infra.git', description: 'Config repository URL')
     string(name: 'config_branch', defaultValue: 'main', description: 'Config branch')
     string(name: 'config_file', defaultValue: 'config-kuber.json', description: 'Path to JSON config file to use')
+
+    credentials(name: 'git_credentials_id', defaultValue: 'ssh_privatekey_github', description: 'SSH Private Key for Git', credentialType: 'com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey')
   }
 
   environment {
@@ -31,7 +33,7 @@ pipeline {
     stage('Clone Repositories') {
             steps {
                 dir('config') {
-                    git branch: params.config_branch, credentialsId: 'ssh_privatekey_github', url: params.config_repo
+                    git branch: params.config_branch, credentialsId: params.git_credentials_id, url: params.config_repo
                     sh 'ls -la'
                     sh 'pwd'
                 }
