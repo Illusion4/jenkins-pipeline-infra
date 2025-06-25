@@ -78,6 +78,12 @@ pipeline {
 
     stage('Terraform Apply') {
       steps {
+        input(
+            message: "Approve Terraform Apply?", 
+            ok: "Apply Now",
+            id: "terraform-approval"
+        )
+        
         dir('infra/terraform/gcp') {          
           sh 'terraform apply -auto-approve -no-color tfplan'
         }
