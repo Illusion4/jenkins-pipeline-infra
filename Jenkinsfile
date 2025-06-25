@@ -14,6 +14,9 @@ pipeline {
     }
 
   parameters {
+    string(name: 'config_repo', defaultValue: 'https://github.com/Illusion4/jenkins-pipeline-infra.git', description: 'Config repository URL')
+    string(name: 'config_branch', defaultValue: 'main', description: 'Config branch')
+    string(name: 'config_file', defaultValue: 'config-kuber.json', description: 'Path to JSON config file to use')
     booleanParam(name: 'RUN_PLAN', defaultValue: true, description: 'Run terraform plan before apply?')
     booleanParam(name: 'AUTO_APPROVE', defaultValue: true, description: 'Auto-approve Terraform apply?')
   }
@@ -30,7 +33,7 @@ pipeline {
     stage('Clone Repositories') {
             steps {
                 dir('config') {
-                    git branch: 'main', url: 'https://github.com/Illusion4/jenkins-pipeline-infra.git'
+                    git branch: params.config_branch, url: params.config_repo
                     sh 'ls -la'
                     sh 'pwd'
                 }
@@ -40,7 +43,7 @@ pipeline {
                     sh 'pwd'
                 }
                 dir('infra/terraform') {
-                    sh 'cp "../../config/config-kuber.json" .'
+                    sh 'cp "../../config/${params.config_file}" .'
                 }
             }
         }
