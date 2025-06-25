@@ -23,7 +23,7 @@ pipeline {
     TF_VAR_cloud_bucket       = credentials('cloud_bucket')
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
-    TF_VAR_jenkins_github_ssh_private_key = "."
+    TF_VAR_JENKINS_GITHUB_SSH_PRIVATE_KEY = credentials('ssh_privatekey_github')
     GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
   }
 
@@ -31,7 +31,7 @@ pipeline {
     stage('Clone Repositories') {
             steps {
                 dir('config') {
-                    git branch: params.config_branch, url: params.config_repo
+                    git branch: params.config_branch, credentialsId: 'ssh_privatekey_github', url: params.config_repo
                     sh 'ls -la'
                     sh 'pwd'
                 }
