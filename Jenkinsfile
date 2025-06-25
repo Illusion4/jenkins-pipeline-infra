@@ -64,11 +64,16 @@ pipeline {
     }
 
     stage('Wait for Approval') {
-        steps {
-          script {
-            input(message: "Approve Terraform Apply?", ok: "Apply Now")
-          }
+      agent none
+      steps {
+        timeout(time: 10, unit: 'MINUTES') {
+          input(
+            message: "Approve Terraform Apply?", 
+            ok: "Apply Now",
+            id: "terraform-approval"
+          )
         }
+      }
     }
 
     stage('Terraform Apply') {
