@@ -63,11 +63,16 @@ pipeline {
       }
     }
 
+    stage('Wait for Approval') {
+        agent none
+        steps {
+            input(message: "Approve Terraform Apply?", ok: "Apply Now")
+        }
+    }
+
     stage('Terraform Apply') {
       steps {
-        dir('infra/terraform/gcp') {
-          input message: 'Approve Terraform Apply?', ok: 'Apply Now'
-          
+        dir('infra/terraform/gcp') {          
           sh 'terraform apply -auto-approve -no-color tfplan'
         }
       }
