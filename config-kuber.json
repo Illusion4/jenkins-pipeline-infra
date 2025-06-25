@@ -7,6 +7,10 @@
     "terraform_username": "terraform-user",
     "jenkins_admin_username":"admin",
     "jenkins_admin_password": "admin",
+    "jenkins_hostname": "jenkins.classschedule.pp.ua",
+    "jenkins_controller_registry": "docker.io",
+    "jenkins_controller_repository": "artamonovdima/jenkins-custom",
+    "jenkins_controller_tag": "6.0",
     "service_account_email": "terraform-user@class-schedule-463110.iam.gserviceaccount.com",
     "keys":[
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINaAVdd0qt6pDi6SziVFNliMRWtBkqVArDI5Dl/D+wSb",
@@ -104,6 +108,12 @@
       "proxied": true
     }
   ],
+  "kubernetes_service_account": {
+        "account_name": "jenkins-service-account",
+        "namespace": "jenkins",
+        "role_name": "cluster-admin",
+        "binding_name": "jenkins-admin-binding"
+  },
   "vm_instances": [],
   "monitoring": {
     "notification_channels": [
