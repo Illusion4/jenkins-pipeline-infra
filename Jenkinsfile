@@ -27,6 +27,7 @@ pipeline {
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
     TF_VAR_JENKINS_GITHUB_SSH_PRIVATE_KEY = credentials('ssh_privatekey_github')
     GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-sa-key')
+    TF_VAR_gar_password_base64 = credentials('gar-password') 
   }
 
   stages {
