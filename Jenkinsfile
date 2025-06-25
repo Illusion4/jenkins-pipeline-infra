@@ -17,8 +17,6 @@ pipeline {
     string(name: 'config_repo', defaultValue: 'https://github.com/Illusion4/jenkins-pipeline-infra.git', description: 'Config repository URL')
     string(name: 'config_branch', defaultValue: 'main', description: 'Config branch')
     string(name: 'config_file', defaultValue: 'config-kuber.json', description: 'Path to JSON config file to use')
-    booleanParam(name: 'RUN_PLAN', defaultValue: true, description: 'Run terraform plan before apply?')
-    booleanParam(name: 'AUTO_APPROVE', defaultValue: true, description: 'Auto-approve Terraform apply?')
   }
 
   environment {
@@ -57,13 +55,10 @@ pipeline {
       }
     }
 
-    stage('Terraform Plan') {
-      when {
-        expression { return params.RUN_PLAN }
-      }
+     stage('Terraform Plan') {
       steps {
         dir('infra/terraform/gcp') {
-          sh "terraform plan -out=tfplan"
+          sh 'terraform plan -out=tfplan -no-color'
         }
       }
     }
@@ -71,11 +66,12 @@ pipeline {
     stage('Terraform Apply') {
       steps {
         dir('infra/terraform/gcp') {
-          sh """
-            terraform apply ${params.AUTO_APPROVE ? '-auto-approve' : 'tfplan'}
-          """
+          input message: 'Approve Terraform Apply?', ok: 'Apply Now'
+          
+          sh 'terraform apply -auto-approve -no-color tfplan'
         }
       }
     }
+    
   }
 }
