@@ -43,7 +43,7 @@ pipeline {
                     sh 'pwd'
                 }
                 dir('infra/terraform') {
-                    sh 'cp "../../config/${params.config_file}" .'
+                    sh "cp \"../../config/${params.config_file}\" ."
                 }
             }
         }
