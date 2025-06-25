@@ -20,7 +20,7 @@ pipeline {
   }
 
   environment {
-    TF_VAR_cloud_bucket       = credentials('tf-cloud-bucket')
+    TF_VAR_cloud_bucket       = credentials('cloud_bucket')
     TF_VAR_cloudflare_api_token   = credentials('cloudflare-token')
     TF_VAR_gcp_credentials_file = credentials('gcp-sa-key')
     TF_VAR_jenkins_github_ssh_private_key = "."
@@ -59,19 +59,6 @@ pipeline {
       steps {
         dir('infra/terraform/gcp') {
           sh 'terraform plan -out=tfplan -no-color'
-        }
-      }
-    }
-
-    stage('Wait for Approval') {
-      agent none
-      steps {
-        timeout(time: 10, unit: 'MINUTES') {
-          input(
-            message: "Approve Terraform Apply?", 
-            ok: "Apply Now",
-            id: "terraform-approval"
-          )
         }
       }
     }
