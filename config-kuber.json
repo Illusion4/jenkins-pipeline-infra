@@ -1,13 +1,13 @@
 {
-    "project": {
-        "name": "lofty-memento-458508-i1",
-        "environment": "dev",
-        "region": "europe-west3",
-        "os": "ubuntu",
-        "terraform_username": "terraform-user",
-        "service_account_email": "terraform-user@lofty-memento-458508-i1.iam.gserviceaccount.com",
-        "jenkins_admin_username":"admin",
-        "jenkins_admin_password": "admin",
+  "project": {
+    "name": "class-schedule-463110",
+    "environment": "dev",
+    "region": "europe-west3",
+    "os": "ubuntu",
+    "terraform_username": "terraform-user",
+    "jenkins_admin_username":"admin",
+    "jenkins_admin_password": "admin",
+    "service_account_email": "terraform-user@class-schedule-463110.iam.gserviceaccount.com",
     "keys":[
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINaAVdd0qt6pDi6SziVFNliMRWtBkqVArDI5Dl/D+wSb",
     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYLUdSPOk00sjUNjHi53n0y6jnJndZS6GN6JbpKmaQRaBLZn8dHJf+vm1HedDiEf7zZL1gy9ILm6mISC5+wWFS4noxfd6p8Z15Ccsp0I2Z3eTVSceBHRhXSzIUo0YkILtIsW3TS6/IjJtAxKa8xc2aOLLiMIkkhVYZHlkYVGMY+8rgHKrjeipFHE6EgP0NF08NHZrvBjSv8CQneuT/C0G2Yz5f/Z83htFJ3ZfnYt8Yapc3hPVUbyzQ3xY3vW2tTp1X5voT2PkhcCGoVUgwH5sU3zcwruy760zKATHiZMzlKULRoCFGYH0CPWEpPOmEElAJCPyZNBUjbqyBHhsmsAsN peachka@anastasiias-MacBook-Pro.local",
@@ -20,477 +20,75 @@
     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCoEj7le3fP95ikaCaugmcUaH0tJ2Ff3Kfx1k88bR2FyUOyn+hk4KO2AdUaUkGTnOlRBwXzIP+6YVAA6XIIjlBuwDmNzRh7iw31MANMIFKMURxKROJiVo6Z9wnwAR0WRYqIiT9cadsBp6IfLT5XgvT90L+jbSmL63o8Cz03wGBnZpbjZ7lM/KVGN5sVEB56CmoVv7cK+zhHjDvG0LJpYSQJI+oXjAhCvM06jOJHALS/D+4e/E8JwG8CFaoFPZVVJLYgF160S9VRM/kdJ6Xyrv/D1+7HT8TKP0PRZCApbhpio0LxSFSmcKvrcNirbrLHcT5zQTxN+gBiBaANVcQ3w5R4ElKyMQLeJA3RZi9Cg4eM51ylHVwNkEIeWk/t9PfdkqhzJ6nZT4axAiw4PgDuWcU12KSlpAhZEg9+AtvCNY2iPlKy9D8CybufrbA+Bypz0Qa9NMvJTI6xBwycO84V1acf+DgJUZwOTA0M5YtrNUkUNScE6aCMh0N17OsK+QMJKkU9huwgwwqB/XKpyrwBzNT5MUG15WB2qtGZkgk/MHhLbbTibpfL7mEZX57/NIpbfLFe/A76D73rB2YObVJU4+++RRJQuFdqGiE3ea9TCoXmelkTn4mnRPbiVgrk9+47uohaSzElJuAyLLCzG1cjFKlBrPnEMsjeE3mWMk5dperedw== user@DESKTOP-4VAAU1J",
     "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCW5FpRxZ6eoVCE40o62Ctux4DcTRaTwCaM+WiqI6jwPmsze6V1/uXVXYXNfxeRGlO8nocDr93JyOFr1e+vDovTxdc5oky5D/5yfWNMjb0NnbUUS26a0wXjxwrDKGqScRXQtfwBZY6T6Jr2+RV6DeW7+6X/DUbKc5HuIx/XG0r0Ks9C+CzQHFBSBiH2OdW80bHKnn6exO/VLAzcgNdXelFxI7z72E8VLOafTFXKe8iHmx2kuX0GFkDz21WaiD93LBr+G8p2rRyXe6wmhYgKWaK6yAlKMZ2hipr4CcHGwePs0bzH0uSdpeQVrIJEo4FbXZhGAT6aIi3WpqrqDlu/DaqN/ipIqMjPL7cBgEzi8eGzj0vzGk/boP+dcQD9tVaB1fBTq7bBlKYp1LpzpZMa4Gc4uHSRAxXhg+e6nevFtfW/n6FufkyOGOZX/Fej0F6qcuhgugCoQMfmCjNZh29dg8e8Z5t8ZXns9ACJCX9N4pd2Iw9vEHVsH+JvLH5fLSgwW33IlT2+ulvI/y3QQkuXTUhBDyJSwvP9yiWJpiPye+HdLAqQ09wbaXErYkEGYdhfFOzS7CaZ7hf6e8frJMavKQzScn1rPFHJy//EmqdP5PlaFXrPIzlu+LBcBvHfOlYNwTqYW+iK96OeK6Y+ByBz98L8r8mBJdp+VEx9iMJHD9GftQ== illusion@DESKTOP-7KVKBE6"
     ],
-        "state_bucket_location_gcp": "europe-west3",
-        "state_bucket_location_aws": "eu-central-1",
-        "bucket_state_name": "state-bucket-name-1377"
-    },
-    "networks": [
+    "state_bucket_location_gcp": "europe-west3",
+    "state_bucket_location_aws": "eu-central-1",
+    "bucket_state_name": "state-bucket-name-1377"
+  },
+  "networks": [
+    { "name": "public", "cidr": "0.0.0.0/0" },
+    { "name": "internal", "cidr": "10.0.0.0/16" }
+  ],
+  "network": [
+    {
+      "name": "k3s-vpc",
+      "vpc_cidr": "10.1.0.0/16",
+      "psa_range": "10.10.0.1/16",
+      "subnets": [
         {
-            "name": "public",
-            "cidr": "0.0.0.0/0"
+          "name": "k3s-subnet",
+          "cidr": "10.1.1.0/24",
+          "public": true,
+          "zone": "a"
         },
         {
-            "name": "internal",
-            "cidr": "10.0.0.0/16"
+          "name": "k3s-private-subnet",
+          "cidr": "10.1.2.0/24",
+          "public": false,
+          "zone": "a"
         }
-    ],
-    "network": [
+        ,
         {
-            "name": "k3s-vpc",
-            "vpc_cidr": "10.1.0.0/16",
-            "psa_range": "10.2.0.0/16",
-            "subnets": [
-                {
-                    "name": "k3s-subnet",
-                    "cidr": "10.1.1.0/24",
-                    "public": true,
-                    "zone": "a"
-                },
-                {
-                    "name": "k3s-private-subnet",
-                    "cidr": "10.1.2.0/24",
-                    "public": false,
-                    "zone": "a"
-                },
-                {
-                    "name": "k3s-private-subnet-2",
-                    "cidr": "10.1.3.0/24",
-                    "public": false,
-                    "zone": "b"
-                }
-            ]
+          "name": "k3s-private-subnet-2",
+          "cidr": "10.1.3.0/24",
+          "public": false,
+          "zone": "b"
         }
-    ],
-    "static_ips": [
+      ]
+    }
+  ],
+  "static_ips": [
     {
       "name": "gke-ingress-ip",
       "type": "regional",
       "region": "europe-west3"
     }
   ],
-    "gke_clusters": {
-        "main-cluster": {
-            "name": "main-cluster",
-            "location": "europe-west3-a",
-            "network": "k3s-vpc",
-            "subnetwork": "k3s-private-subnet",
-            "initial_node_count": 1,
-            "node_pools": [
-                {
-                    "name": "main-pool",
-                    "machine_type": "e2-medium",
-                    "min_node_count": 1,
-                    "max_node_count": 3
-                }
-            ],
-            "private_cluster": true,
-            "authorized_networks": [
-                {
-                    "cidr_block": "0.0.0.0/0",
-                    "display_name": "Anywhere"
-                }
-            ],
-            "kubernetes_version": "1.33"
+  "gke_clusters": {
+    "main-cluster": {
+      "name": "main-cluster",
+      "location": "europe-west3-a",
+      "network": "k3s-vpc",
+      "subnetwork": "k3s-private-subnet",
+      "initial_node_count": 1,
+      "node_pools": [
+        {
+          "name": "main-pool",
+          "machine_type": "e2-medium",
+          "min_node_count": 1,
+          "max_node_count": 3
         }
-    },
-    "vm_instances": [
+      ],
+      "private_cluster": true,
+      "authorized_networks": [
         {
-            "name": "k3s-node-1",
-            "network": "k3s-vpc",
-            "size": "small",
-            "zone": "a",
-            "subnet": "k3s-private-subnet",
-            "public_ip": true,
-            "tags": [
-                "k3s-node"
-            ],
-            "security_groups": [
-                "k3s-sg"
-            ]
-        },
-        {
-            "name": "k3s-node-2",
-            "network": "k3s-vpc",
-            "size": "small",
-            "zone": "a",
-            "subnet": "k3s-private-subnet",
-            "public_ip": true,
-            "tags": [
-                "k3s-node"
-            ],
-            "security_groups": [
-                "k3s-sg"
-            ]
-        },
-        {
-            "name": "k3s-node-3",
-            "network": "k3s-vpc",
-            "size": "small",
-            "zone": "a",
-            "subnet": "k3s-private-subnet",
-            "public_ip": true,
-            "tags": [
-                "k3s-node"
-            ],
-            "security_groups": [
-                "k3s-sg"
-            ]
-        },
-        {
-            "name": "bastion",
-            "network": "k3s-vpc",
-            "size": "small",
-            "zone": "a",
-            "subnet": "k3s-subnet",
-            "public_ip": true,
-            "tags": [
-                "bastion",
-                "ssh"
-            ],
-            "security_groups": [
-                "bastion-sg"
-            ]
+          "cidr_block": "0.0.0.0/0",
+          "display_name": "Anywhere"
         }
-    ],
-    "security_groups": [
-        {
-            "name": "k3s-sg",
-            "vpc": "k3s-vpc",
-            "description": "Allow K3s ports",
-            "attach_to": [
-                "k3s-node"
-            ],
-            "ingress": [
-                {
-                    "protocol": "tcp",
-                    "port": 22,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 6443,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 2379,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 2380,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 10250,
-                    "source": "public"
-                },
-                {
-                    "protocol": "udp",
-                    "port": 8472,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 31111,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 80,
-                    "source": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 443,
-                    "source": "public"
-                }
-            ],
-            "egress": [
-                {
-                    "protocol": "tcp",
-                    "port": 80,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 443,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "udp",
-                    "port": 53,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 6443,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 2379,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 2380,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 10250,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "udp",
-                    "port": 8472,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 31111,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 5432,
-                    "destination": "db-sg"
-                }
-            ]
-        },
-        {
-            "name": "db-sg",
-            "vpc": "k3s-vpc",
-            "attach_to": [
-                "maindb"
-            ],
-            "description": "PostgreSQL accessible only from cluster",
-            "ingress": [
-                {
-                    "protocol": "tcp",
-                    "port": 5432,
-                    "source": "k3s-sg"
-                }
-            ],
-            "egress": [
-                {
-                    "protocol": "tcp",
-                    "port": 80,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 443,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "udp",
-                    "port": 53,
-                    "destination": "public"
-                }
-            ]
-        },
-        {
-            "name": "bastion-sg",
-            "vpc": "k3s-vpc",
-            "attach_to": [
-                "bastion"
-            ],
-            "description": "Allow SSH from admin IP to private network",
-            "ingress": [
-                {
-                    "protocol": "tcp",
-                    "port": 22,
-                    "source": "public"
-                }
-            ],
-            "egress": [
-                {
-                    "protocol": "tcp",
-                    "port": 22,
-                    "destination": "k3s-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 22,
-                    "destination": "db-sg"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 80,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "tcp",
-                    "port": 443,
-                    "destination": "public"
-                },
-                {
-                    "protocol": "udp",
-                    "port": 53,
-                    "destination": "public"
-                }
-            ]
-        }
-    ],
-    "artifact_registry": [
-        {
-            "enabled": true,
-            "provider": "gcp",
-            "name": "my-artifact-registry",
-            "region": "europe-west3",
-            "repository_type": "docker",
-            "format": "DOCKER",
-            "auth_required": true
-        },
-        {
-            "enabled": true,
-            "provider": "aws",
-            "name": "my-artifact-registry",
-            "region": "eu-central-1",
-            "repository_type": "docker",
-            "format": "DOCKER",
-            "auth_required": true
-        }
-    ],
-    "databases": [
-        {
-            "name": "maindb",
-            "network": "k3s-vpc",
-            "type": "postgres",
-            "version": "14",
-            "size": "small",
-            "zone": [
-                "a",
-                "b"
-            ],
-            "subnets": [
-                "k3s-private-subnet",
-                "k3s-private-subnet-2"
-            ],
-            "port": 5432,
-            "security_groups": [
-                "db-sg"
-            ]
-        }
-    ],
-    "target_groups": [
-        {
-            "name": "k3s-kubeapi-tg",
-            "vpc": "k3s-vpc",
-            "protocol": "TCP",
-            "port": 6443,
-            "target_type": "instance",
-            "vm": [
-                "k3s-node-1",
-                "k3s-node-2",
-                "k3s-node-3"
-            ]
-        },
-        {
-            "name": "k3s-ingress-http-tg",
-            "vpc": "k3s-vpc",
-            "protocol": "TCP",
-            "port": 80,
-            "target_type": "instance",
-            "vm": [
-                "k3s-node-1",
-                "k3s-node-2",
-                "k3s-node-3"
-            ]
-        },
-        {
-            "name": "k3s-ingress-https-tg",
-            "vpc": "k3s-vpc",
-            "protocol": "TCP",
-            "port": 443,
-            "target_type": "instance",
-            "vm": [
-                "k3s-node-1",
-                "k3s-node-2",
-                "k3s-node-3"
-            ]
-        }
-    ],
-    "load_balancers": [
-        {
-            "name": "k3s-nlb-kubeapi",
-            "internal": false,
-            "load_balancer_type": "network",
-            "vpc": "k3s-vpc",
-            "protocol": "TCP",
-            "port": 6443,
-            "target_type": "instance",
-            "security_groups": [
-                "k3s-sg"
-            ],
-            "subnets": [
-                "k3s-subnet"
-            ],
-            "target_tags": [
-                "k3s-node"
-            ]
-        },
-        {
-            "name": "k3s-nlb-ingress",
-            "internal": false,
-            "load_balancer_type": "network",
-            "vpc": "k3s-vpc",
-            "protocol": "TCP",
-            "port": 80,
-            "target_type": "instance",
-            "security_groups": [
-                "k3s-sg"
-            ],
-            "subnets": [
-                "k3s-subnet"
-            ],
-            "target_tags": [
-                "k3s-node"
-            ]
-        }
-    ],
-    "listeners": [
-        {
-            "name": "k3s-listener-kubeapi",
-            "protocol": "TCP",
-            "port": 6443,
-            "load_balancer": "k3s-nlb-kubeapi",
-            "default_action": {
-                "type": "forward",
-                "target_group": "k3s-kubeapi-tg"
-            }
-        },
-        {
-            "name": "k3s-listener-ingress-http",
-            "protocol": "TCP",
-            "port": 80,
-            "load_balancer": "k3s-nlb-ingress",
-            "default_action": {
-                "type": "forward",
-                "target_group": "k3s-ingress-http-tg"
-            }
-        },
-        {
-            "name": "k3s-listener-ingress-https",
-            "protocol": "TCP",
-            "port": 443,
-            "load_balancer": "k3s-nlb-ingress",
-            "default_action": {
-                "type": "forward",
-                "target_group": "k3s-ingress-https-tg"
-            }
-        }
-    ],
-    "kubernetes_service_account": {
-        "account_name": "jenkins-service-account",
-        "namespace": "jenkins",
-        "role_name": "cluster-admin",
-        "binding_name": "jenkins-admin-binding"
-    },
-    "dns_records": [
+      ],
+      "kubernetes_version": "1.33"
+    }
+  },
+  "dns_records": [
     {
       "name": "classschedule.pp.ua",
       "type": "A",
@@ -506,200 +104,378 @@
       "proxied": true
     }
   ],
-    "iam": {
-        "aws": [
-            {
-                "name": "EC2_ECR",
-                "description": "Allows EC2 instances to pull images from ECR",
-                "role_policy": {
-                    "Version": "2012-10-17",
-                    "Statement": [
-                        {
-                            "Effect": "Allow",
-                            "Action": [
-                                "ec2:DescribeTags",
-                                "ecs:CreateCluster",
-                                "ecs:DeregisterContainerInstance",
-                                "ecs:DiscoverPollEndpoint",
-                                "ecs:Poll",
-                                "ecs:RegisterContainerInstance",
-                                "ecs:StartTelemetrySession",
-                                "ecs:UpdateContainerInstancesState",
-                                "ecs:Submit*",
-                                "ecr:GetAuthorizationToken",
-                                "ecr:BatchCheckLayerAvailability",
-                                "ecr:GetDownloadUrlForLayer",
-                                "ecr:BatchGetImage",
-                                "logs:CreateLogStream",
-                                "logs:PutLogEvents"
-                            ],
-                            "Resource": "*"
-                        },
-                        {
-                            "Effect": "Allow",
-                            "Action": "ecs:TagResource",
-                            "Resource": "*",
-                            "Condition": {
-                                "StringEquals": {
-                                    "ecs:CreateAction": [
-                                        "CreateCluster",
-                                        "RegisterContainerInstance"
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                },
-                "trust_policy": {
-                    "Version": "2012-10-17",
-                    "Statement": [
-                        {
-                            "Effect": "Allow",
-                            "Action": [
-                                "sts:AssumeRole"
-                            ],
-                            "Principal": {
-                                "Service": [
-                                    "ec2.amazonaws.com"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            }
-        ],
-        "gcp": []
-    },
-    "namespaces": [
-        {
-            "name": "intproject"
+  "vm_instances": [],
+  "monitoring": {
+    "notification_channels": [
+      {
+        "name": "alerts-email",
+        "type": "email",
+        "labels": {
+          "email_address": "vladyslavlintur@gmail.com"
         }
+      }
     ],
-    "configmaps": [
-        {
-            "name": "redis-config",
-            "data": {
-                "timeout": "1440",
-                "maxmemory-policy": "allkeys-lru"
-            },
-            "namespace": "intproject"
-        },
-        {
-            "name": "server-config",
-            "data": {
-                "DB_HOST": "{{ db_host }}",
-                "DB_PORT": "{{ db_port }}",
-                "REDIS_HOST": "redis",
-                "REDIS_PORT": "6379"
-            },
-            "namespace": "intproject"
-        }
+    "log_based_metrics": [
+      {
+        "name": "backend_http_errors",
+        "description": "HTTP errors from backend pods",
+        "filter": "resource.type=\"k8s_container\" AND resource.labels.container_name=\"server\" AND textPayload:\"HTTP/1.1 5\"",
+        "metric_kind": "DELTA",
+        "value_type": "INT64",
+        "unit": "1"
+      },
+      {
+        "name": "backend_db_connection_errors",
+        "description": "DB connection errors from backend pods",
+        "filter": "resource.type=\"k8s_container\" AND resource.labels.container_name=\"server\" AND textPayload:\"PSQLException: The connection attempt failed\"",
+        "metric_kind": "DELTA",
+        "value_type": "INT64",
+        "unit": "1"
+      }
     ],
-    "secrets": [
-        {
-            "name": "db-secret",
-            "data": {
-                "DB_USER": "{{ db_user }}",
-                "DB_PASSWORD": "{{ db_password }}",
-                "DB_NAME": "{{ db_name }}"
-            },
-            "namespace": "intproject"
-        }
-    ],
-    "services": [
-        {
-            "name": "redis",
-            "app": "redis",
-            "type": "ClusterIP",
-            "port": 6379,
-            "target_port": 6379,
-            "protocol": "TCP",
-            "namespace": "intproject"
-        },
-        {
-            "name": "server",
-            "app": "server",
-            "type": "ClusterIP",
-            "port": 8080,
-            "target_port": 8080,
-            "protocol": "TCP",
-            "namespace": "intproject"
-        },
-        {
-            "name": "frontend",
-            "app": "frontend",
-            "type": "ClusterIP",
-            "port": 3000,
-            "target_port": 80,
-            "protocol": "TCP",
-            "namespace": "intproject"
-        }
-    ],
-    "deployments": [
-        {
-            "name": "redis",
-            "app": "redis",
-            "registry": "dockerhub",
-            "image": "redis",
-            "version": "7",
-            "replicas": 1,
-            "port": 6379,
-            "config_refs": [
-                "redis-config"
-            ],
-            "secret_refs": [],
-            "namespace": "intproject"
-        },
-        {
-            "name": "server",
-            "app": "server",
-            "registry": "dockerhub",
-            "image": "vladyslavlintur/class_schedule_backend",
-            "version": "latest",
-            "replicas": 1,
-            "port": 8080,
-            "config_refs": [
-                "server-config"
-            ],
-            "secret_refs": [
-                "db-secret"
-            ],
-            "namespace": "intproject"
-        },
-        {
-            "name": "frontend",
-            "app": "frontend",
-            "registry": "dockerhub",
-            "image": "vladyslavlintur/class_schedule_frontend",
-            "version": "latest",
-            "replicas": 1,
-            "port": 80,
-            "config_refs": [],
-            "secret_refs": [],
-            "namespace": "intproject"
-        }
-    ],
-    "monitoring": {
-        "alert_email": "olegkuzo23@email.com",
-        "disk_usage_threshold": 80,
-        "memory_usage_threshold": 80,
-        "network_outbound_threshold": 10000000,
-        "cpu_usage_threshold": 80,
-        "agent_self_threshold": 80,
-        "network_interface_usage_threshold": 10000000
-    },
-    "ingress": [
-        {
-        "name": "app-tls-secret",
-        "cluster_issuer_name_map": {"staging": "letsencrypt-staging", "production": "letsencrypt-production"},
-        "ingress_class_name": "nginx",
-        "certificate_secret_map": { "staging": "tls-secret-stag", "production": "tls-secret-prod" },
-        "app_name": "my-app",
-        "namespace": "intproject",
-        "ingress_name": "app-ingress",
-        "domain": "qjsoq.pp.ua",
-        "tls_secret_name_map": {"staging": "app-secret-tls-stag", "production": "app-secret-tls-prod"},
-        "ingress_namespace": "intproject"
-        }
+    "alert_policies": [
+      {
+        "name": "High HTTP Error Rate",
+        "combiner": "OR",
+        "conditions": [
+          {
+            "name": "Backend HTTP error rate",
+            "metric_filter": "resource.type=\"k8s_container\" AND metric.type=\"logging.googleapis.com/user/backend_http_errors\"",
+            "threshold": 5,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_SUM"
+          }
+        ]
+      }, 
+      {
+        "name": "Backend DB Errors",
+        "combiner": "OR",
+        "conditions": [
+          {
+            "name": "DB connection error rate",
+            "metric_filter": "resource.type=\"k8s_container\" AND metric.type=\"logging.googleapis.com/user/backend_db_connection_errors\"",
+            "threshold": 2,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_SUM"
+          }
+        ]
+      },
+      {
+        "name": "Node Health",
+        "combiner": "OR",
+        "conditions": [
+          {
+            "name": "High CPU",
+            "metric_filter": "metric.type=\"kubernetes.io/node/cpu/allocatable_utilization\" AND resource.type=\"k8s_node\"",
+            "threshold": 0.8,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_MEAN"
+          },
+          {
+            "name": "High Memory",
+            "metric_filter": "metric.type=\"kubernetes.io/node/memory/allocatable_utilization\" AND resource.type=\"k8s_node\"",
+            "threshold": 0.9,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_MEAN"
+          }
+        ]
+      },
+      {
+        "name": "Container Restart Spike",
+        "combiner": "OR",
+        "conditions": [
+          {
+            "name": "Container restarted frequently",
+            "metric_filter": "resource.type=\"k8s_container\" AND metric.type=\"kubernetes.io/container/restart_count\"",
+            "threshold": 3,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_DELTA"
+          }
+        ]
+      },
+
+      {
+        "name": "High Container CPU Usage",
+        "combiner": "OR",
+        "conditions": [
+          {
+            "name": "Container CPU usage > 0.8 cores",
+            "metric_filter": "resource.type=\"k8s_container\" AND metric.type=\"kubernetes.io/container/cpu/core_usage_time\"",
+            "threshold": 0.8,
+            "duration": "60s",
+            "comparison": "COMPARISON_GT",
+            "aligner": "ALIGN_RATE"
+          }
+        ]
+      }
     ]
+  },
+
+  "security_groups": [
+    {
+      "name": "k3s-sg",
+      "vpc": "k3s-vpc",
+      "description": "Allow K3s ports",
+      "attach_to": ["k3s-node"],
+      "ingress": [
+        { "protocol": "tcp", "port": 22, "source": "public" },
+        { "protocol": "tcp", "port": 6443, "source": "public" },
+        { "protocol": "tcp", "port": 2379, "source": "public" },
+        { "protocol": "tcp", "port": 2380, "source": "public" },
+        { "protocol": "tcp", "port": 10250, "source": "public" },
+        { "protocol": "udp", "port": 8472, "source": "public" },
+        { "protocol": "tcp", "port": 31111, "source": "public" },
+        { "protocol": "tcp", "port": 80, "source": "public" },
+        { "protocol": "tcp", "port": 443, "source": "public" }
+      ],
+      "egress": [
+        { "protocol": "tcp", "port": 80, "destination": "public" },
+        { "protocol": "tcp", "port": 443, "destination": "public" },
+        { "protocol": "udp", "port": 53, "destination": "public" },
+        { "protocol": "tcp", "port": 6443, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 2379, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 2380, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 10250, "destination": "k3s-sg" },
+        { "protocol": "udp", "port": 8472, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 31111, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 5432, "destination": "db-sg" }
+      ]
+    },
+    {
+      "name": "db-sg",
+      "vpc": "k3s-vpc",
+      "attach_to": ["maindb"],
+      "description": "PostgreSQL accessible only from cluster",
+      "ingress": [
+        { "protocol": "tcp", "port": 5432, "source": "k3s-sg" }
+      ],
+      "egress": [
+        { "protocol": "tcp", "port": 80, "destination": "public" },
+        { "protocol": "tcp", "port": 443, "destination": "public" },
+        { "protocol": "udp", "port": 53, "destination": "public" }
+      ]
+    },
+    {
+      "name": "bastion-sg",
+      "vpc": "k3s-vpc",
+      "attach_to": ["bastion"],
+      "description": "Allow SSH from admin IP to private network",
+      "ingress": [
+        { "protocol": "tcp", "port": 22, "source": "public" }
+      ],
+      "egress": [
+        { "protocol": "tcp", "port": 22, "destination": "k3s-sg" },
+        { "protocol": "tcp", "port": 22, "destination": "db-sg" },
+        { "protocol": "tcp", "port": 80, "destination": "public" },
+        { "protocol": "tcp", "port": 443, "destination": "public" },
+        { "protocol": "udp", "port": 53, "destination": "public" }
+      ]
+    }
+  ],
+  "artifact_registry":[
+    {
+      "enabled": true,
+      "provider": "gcp",
+      "name": "my-artifact-registry",
+      "region": "europe-west3",
+      "repository_type": "docker",
+      "format": "DOCKER",
+      "auth_required": true
+    },
+    {
+      "enabled": true,
+      "provider": "aws",
+      "name": "my-artifact-registry",
+      "region": "eu-central-1",
+      "repository_type": "docker",
+      "format": "DOCKER",
+      "auth_required": true
+    }
+  ],
+  "databases": [
+    {
+      "name": "maindb",
+      "network": "k3s-vpc",
+      "type": "postgres",
+      "version": "14",
+      "size": "small",
+      "zone": ["a", "b"],
+      "subnets": ["k3s-private-subnet", "k3s-private-subnet-2"],
+      "port": 5432,
+      "security_groups": ["db-sg"]
+    }
+  ],
+  "target_groups": [],
+  "load_balancers": [],
+  "listeners": [],
+  "iam": {
+    "aws": [
+      {
+        "name": "EC2_ECR",
+        "description": "Allows EC2 instances to pull images from ECR",
+        "role_policy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "ec2:DescribeTags",
+                "ecs:CreateCluster",
+                "ecs:DeregisterContainerInstance",
+                "ecs:DiscoverPollEndpoint",
+                "ecs:Poll",
+                "ecs:RegisterContainerInstance",
+                "ecs:StartTelemetrySession",
+                "ecs:UpdateContainerInstancesState",
+                "ecs:Submit*",
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Resource": "*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "ecs:TagResource",
+              "Resource": "*",
+              "Condition": {
+                "StringEquals": {
+                  "ecs:CreateAction": [
+                    "CreateCluster",
+                    "RegisterContainerInstance"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "trust_policy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": ["sts:AssumeRole"],
+              "Principal": {
+                "Service": ["ec2.amazonaws.com"]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "gcp": []
+  },
+
+  "namespaces": [
+    {
+      "name": "intproject"
+    }
+  ],
+  "configmaps": [
+    {
+      "name": "redis-config",
+      "data": {
+        "timeout": "1440",
+        "maxmemory-policy": "allkeys-lru"
+      },
+      "namespace": "intproject"
+    },
+    {
+      "name": "server-config",
+      "data": {
+        "DB_HOST": "{{ db_host }}",
+        "DB_PORT": "{{ db_port }}",
+        "REDIS_HOST": "redis",
+        "REDIS_PORT": "6379"
+      },
+      "namespace": "intproject"
+    }
+    ],
+  "secrets": [
+    {
+      "name": "db-secret",
+      "data": {
+        "DB_USER": "{{ db_user }}",
+        "DB_PASSWORD": "{{ db_password }}",
+        "DB_NAME": "{{ db_name }}"
+      },
+      "namespace": "intproject"
+    }
+  ],
+  "services": [
+    {
+      "name": "redis",
+      "app": "redis",
+      "type": "ClusterIP",
+      "port": 6379,
+      "target_port": 6379,
+      "protocol": "TCP",
+      "namespace": "intproject"
+
+    },
+    {
+      "name": "server",
+      "app": "server",
+      "type": "ClusterIP",
+      "port": 8080,
+      "target_port": 8080,
+      "protocol": "TCP",
+      "namespace": "intproject"
+    },
+    {
+      "name": "frontend",
+      "app": "frontend",
+      "type": "ClusterIP",
+      "port": 3000,
+      "target_port": 80,
+      "protocol": "TCP",
+      "namespace": "intproject"
+    }
+  ],
+  "deployments":  [
+    {
+      "name": "redis",
+      "app": "redis",
+      "registry": "dockerhub",
+      "image": "redis",
+      "version": "7",
+      "replicas": 1,
+      "port": 6379,
+      "config_refs": ["redis-config"],
+      "secret_refs": [],
+      "namespace": "intproject"
+    },
+    {
+      "name": "server",
+      "app": "server",
+      "registry": "dockerhub",
+      "image": "vladyslavlintur/class_schedule_backend",
+      "version": "latest",
+      "replicas": 1,
+      "port": 8080,
+      "config_refs": ["server-config"],
+      "secret_refs": ["db-secret"],
+      "namespace": "intproject"
+    },
+    {
+      "name": "frontend",
+      "app": "frontend",
+      "registry": "dockerhub",
+      "image": "vladyslavlintur/class_schedule_frontend",
+      "version": "latest",
+      "replicas": 1,
+      "port": 80,
+      "config_refs": [],
+      "secret_refs": [],
+      "namespace": "intproject"
+    }
+  ]
 }
